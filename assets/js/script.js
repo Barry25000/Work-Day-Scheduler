@@ -4,16 +4,16 @@
 // in the html.
 $(function () {
   
-  gettextFromStorage();
+  getFromStorage();
   var storedText
-    // code to display the current date in the header of the page.
+  // code to display the current date in the header of the page.
   var currentDay = $("#currentDay");
   currentDay.text(dayjs().format("MMM D, YYYY"));
   
-    // get current hour for past, present and future.
+  // get current hour for past, present and future.
   var currentHour=dayjs().format('HH');
   console.log(currentHour);
-
+  
   // listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -22,27 +22,27 @@ $(function () {
     // useful when saving the description in local storage?
     //Takes an array of events and saves them to local storage.
     
-       
+    
     $('.time-block').on('click', '.saveBtn', function() {
       var description = $(this).siblings('.description').val();
       var buttonId = $(this).parent().attr("id");
       // console.log(description);
       localStorage.setItem(buttonId, description); 
-      console.log(storedText);
+      
     });
-
-
+    
+    
     // need a for loop to extract the data from the array, looking for parent element(time block info) snd value (textarea info). I need to apend all the info into 1 element and then save in local storage
-
-
-    function gettextFromStorage () {
+    
+    
+    function getFromStorage () {
       storedText = localStorage.getItem("buttonId");
       if (storedText) {
         storedText = JSON.parse(storedText);
       } else {
         storedText = []
       }
-
+      
       return storedText
 
     }
