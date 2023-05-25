@@ -9,20 +9,24 @@ $(function () {
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
     
-    $('.saveBtn').on("click", function(z){
-      z.preventDefault();
+    $('.saveBtn').on("click", function(e){
+      e.preventDefault();
       
       var description = $(".description");
       saveEventsToStorage();
       console.log(description);
-      var will =$(".description").parent()
-      console.log(will);
+      // var will =$(".description").parent()
+      // console.log(will);
     })
     
+    //Takes an array of events and saves them to local storage.
+          // need a for loop to extract the data from the array, looking for parent element(time block info) snd value (textarea info). I need to apend all the info into 1 element and then save in local storage
+          
     function saveEventsToStorage(description) {
       localStorage.setItem('description', JSON.stringify(description));
       // console.log(localStorage);
-      
+      // $('#top').parents();
+      // console.log($('#top').parents());
     }
 
     
