@@ -35,8 +35,7 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-I was able to complete all acceptance criteria, except, I was unable to retrive saved data and repopulate on refresh.
-I believe with more time I could have also completed this requirement.
+I was able to complete all acceptance criteria.
 
 learning alot, very fast passed, just need time to become more confident with concepts.
 

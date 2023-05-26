@@ -35,19 +35,7 @@ $(function () {
   // need a for loop to extract the data from the array, looking for parent element(time block info) snd value (textarea info). I need to apend all the info into 1 element and then save in local storage
 
 
-  // function getFromStorage() {
-  //   storedText = localStorage.getItem("buttonId");
-  //   if (storedText) {
-  //     storedText = JSON.parse(storedText);
-  //   } else {
-  //     storedText = []
-  //   }
-
-  //   return storedText
-
-  // }
-
-
+  
 
   // code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -78,7 +66,7 @@ $(function () {
   })
 
 
-  // TODO: Add code to get any user input that was saved in localStorage and set
+  // Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   for (var t = 9; t < 18; t++) {
